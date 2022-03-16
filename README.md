@@ -107,3 +107,21 @@ express.static.file 의 파일 타입에 따라서 브라우저가 다르게 반
 		    return () => {};
   }, []);
 ```
+
+
+### browser download script as https protocol
+
+원인 
+```
+처음 index.html 파일의 response header 을 보면
+	Upgrade-Insecure-Requests: 1
+	이 포함되어 있다.  
+	이는 브라우저로 하여금 다음 요청을 되도록 https 로 바꾸어서 보내도록 한다.  
+	node.js helmet 라이브러리가 헤더를 조정한것이다.  
+```
+
+해결   
+
+```
+https 를 표준으로 사용하고, http는 https 로 redirect 하도록 변경
+```

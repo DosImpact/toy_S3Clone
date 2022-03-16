@@ -9,8 +9,7 @@ const fetchBlob = async (url) => {
   });
 };
 
-export const SERVER_URI =
-  process.env.REACT_APP_SERVER_URI || 'http://localhost:4000';
+export const SERVER_URI = process.env.REACT_APP_SERVER_URI || 'http://localhost:4000';
 
 export const SERVER_URI_STATIC = `${SERVER_URI}/api/static`;
 
