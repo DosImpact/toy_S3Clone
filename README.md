@@ -2,10 +2,26 @@
 
 ```
 npm i 
+// start dev
 npm run start:dev
+
+// start prod
+npm run build
+npm run start:prod
+
 ```
 
-## configure 
+
+## settings env 
+
+```
+MAINTAINER = dosimpact
+PORT = 8000
+STATIC_SERVE_PATH = default
+VOLUME_ROOT_DIR = ""
+```
+
+## installed packages 
 
 ```
 // eslint
